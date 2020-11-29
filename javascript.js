@@ -56,7 +56,18 @@ function checkPassword(password){
 		completedInput(password)
 	}
 }
-//
+//check pass 1 to pass 2
+function passwordSame(password, confirmP){
+	if(password.value === ''){
+		emptyInput(password, 'eingeben')
+	}
+	else if(password.value !== confirmP.value){
+		emptyInput(confirmP, 'ojej')
+		
+	}else{
+		completedInput(confirmP)
+	}
+}
 //check each inpur epmty or not
 function checkAllInput(arra){
 	arra.forEach(function(myInput){
@@ -74,6 +85,7 @@ formula.addEventListener('submit',e =>{
 	lengthName(name,3,13);
 	checkEmail(email);
 	checkPassword(password);
+	passwordSame(password,confirmP);
 		})
 
 /* get all input and container

@@ -64,6 +64,7 @@ h2{
 	color: var(--falschColor);
 	position: absolute;
 	visibility: hidden;
+	line-height: 15px;
 
 }
 .contLabel.falsch small{
