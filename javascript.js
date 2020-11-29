@@ -62,7 +62,7 @@ function passwordSame(password, confirmP){
 		emptyInput(password, 'eingeben')
 	}
 	else if(password.value !== confirmP.value){
-		emptyInput(confirmP, 'ojej')
+		emptyInput(confirmP, 'stimmen nicht überein')
 		
 	}else{
 		completedInput(confirmP)
