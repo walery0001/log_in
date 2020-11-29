@@ -43,18 +43,20 @@ function checkEmail(email){
 }
 //check password 
 function validatePassword(password) {
-  //  var  = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
-}
+   let rege = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+	return rege.test(password)	
+   	}
 function checkPassword(password){
 	if(password.value === ''){
 		emptyInput(password, 'eingeben')
 	}
 	else if(!password.value === validatePassword(password.value)){
-		emptyInput(password, 'ist unkorrekt')
+		emptyInput(password, 'erfordert Groß-, Klein- buchstaben,eine Zahl, ein Sonderzeichen')
 	}else{
 		completedInput(password)
 	}
 }
+//
 //check each inpur epmty or not
 function checkAllInput(arra){
 	arra.forEach(function(myInput){
@@ -168,3 +170,4 @@ confirm_check(password,confirmP)
 // }
 });
 */
+//'muss mindestens 8 Zeichen umfassen, aus kleinen, grossen Buchstaben, Zahl und Sonderzeichen'
